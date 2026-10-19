@@ -6,7 +6,7 @@ Scores = []
 
 
 #While loop for working
-While True:
+while (True):
     if user_input == 0:
         print("Scores:", Scores)
         break
