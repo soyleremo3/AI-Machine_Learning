@@ -8,6 +8,9 @@ Mises = 0
 
 Display = (1600, 1000)
 
+font = pygame.font.SysFont("Arial", 36)
+
+
 Boottoms = {
     "Make": pygame.Rect(300, 650, 300, 150), 
     "Miss": pygame.Rect(1000, 650, 300, 150)
@@ -18,6 +21,7 @@ pygame.display.set_caption("Basketball Game")
 
 
 while isWorking:
+    screen.fill((0, 0, 0)) # Cleans the Screen
     for event in pygame.event.get():
         
         if event.type == pygame.MOUSEBUTTONDOWN and event.button == 1:
@@ -36,8 +40,10 @@ while isWorking:
             isWorking = False
             
     #(right to left, up to down, width, height), it at the top left corner of the screen
-    pygame.draw.rect(screen, (255, 0, 0), (300, 650, 300, 150))
-    pygame.draw.rect(screen, (255, 0, 0), (1000, 650, 300, 150))
+    pygame.draw.rect(screen, (255, 0, 0), Boottoms["Make"])
+    pygame.draw.rect(screen, (255, 0, 0), Boottoms["Miss"])
+
+    
     pygame.display.flip()
 
 pygame.quit()
