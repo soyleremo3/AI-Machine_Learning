@@ -16,7 +16,8 @@ while isWorking:
             isWorking = False
             
     #(right to left, up to down, width, height), it at the top left corner of the screen
-    pygame.draw.rect(screen, (255, 0, 0), (700, 425, 200, 150))
+    pygame.draw.rect(screen, (255, 0, 0), (300, 650, 300, 150))
+    pygame.draw.rect(screen, (255, 0, 0), (1000, 650, 300, 150))
     pygame.display.flip()
 
 pygame.quit()
