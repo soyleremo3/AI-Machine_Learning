@@ -72,9 +72,13 @@ while is_running:
     # Render text strings into surface objects
     stats_text = f"Makes: {makes}   |   Misses: {misses}   |   Percentage: {shooting_percentage:.1f}%"
     text_surface = font.render(stats_text, True, WHITE)
+    make_miss_surface = font.render("Make", True, WHITE)
+    miss_miss_surface = font.render("Miss", True, WHITE)
     
     # Draw the text surface to the top-center of the screen
     screen.blit(text_surface, (550, 100))
+    screen.blit(make_miss_surface, (400, 700))  # Positioning the "Make" and "Miss" labels above their respective buttons
+    screen.blit(miss_miss_surface, (1100, 700))  # Positioning the "Make" and "Miss" labels above their respective buttons
     
     # 5. Update the display and cap the frame rate
     pygame.display.flip()
